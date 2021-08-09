@@ -1,17 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import WeatherSearch from "./WeatherSearch";
+import ReactDom from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
 
-import "./App.css";
-
-function App() {
-  return (
-    <div className="App">
-      <h1>Weather App</h1>
-      <WeatherSearch />
-    </div>
-  );
-}
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDom.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.querySelector("#weather")
+);
